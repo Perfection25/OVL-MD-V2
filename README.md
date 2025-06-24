@@ -94,10 +94,6 @@ function runCommand(command, args, options = {}) {
   }
 }
 
-console.log("Installation de ffmpeg...");
-runCommand('apt-get', ['update']);
-runCommand('apt-get', ['install', '-y', 'ffmpeg']);
-
 if (!existsSync('ovl')) {
   console.log("Clonage...");
   runCommand('git', ['clone', 'https://github.com/Ainz-devs/OVL-MD-V2', 'ovl']);
